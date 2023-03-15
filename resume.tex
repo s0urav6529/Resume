@@ -1,0 +1,162 @@
+% resume.tex
+%
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2007-2010 Todd C. Miller <Todd.Miller@courtesan.com> http://www.courtesan.com/todd
+%
+% This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
+
+%
+% Update on: 
+%   - Overleaf
+%   - Github repo: resume
+%   - Personal Blog: ovebepari.github.io
+
+\documentclass[legalpaper,10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+%-----------------------------------------------------------
+\usepackage[empty]{fullpage}
+\usepackage{color}
+\definecolor{mygrey}{gray}{0.80}
+\usepackage{hyperref} 
+
+\usepackage{xcolor}
+\hypersetup{
+	colorlinks,
+	linkcolor={red!50!black},
+	citecolor={blue!50!black},
+	urlcolor={blue!80!black}
+}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Adjust margins to 0.5in on all sides
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-0.5in}
+%\addtolength{\textheight}{1.0in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+
+\newcommand{\ressubheading}[4]{
+	\begin{tabular*}{7.1in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & \textit{#4} \\
+	\end{tabular*}\vspace{-6pt}}
+
+\newcommand{\ressubheadinged}[4]{
+	\begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4}\\
+	\end{tabular*}\vspace{-6pt}}
+
+%-----------------------------------------------------------
+
+
+\begin{document}
+
+	\begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}}
+		\\
+		\\
+		\\
+		\textbf{\large Ove Bepari}\\
+		\\
+		Dhaka, Bangladesh, \href{mailto:ovebepari@gmail.com}{ovebepari@gmail.com}, +880-16791221xx, \textbf{Github}: \href{https://github.com/ovebepari}{@ovebepari}, LinkedIn: \href{https://linkedin.com/in/ovebepari}{@ovebepari} \\
+		 Blog: \url{https://ovebepari.github.io}, Twitter: \href{https://twitter.com/ovebepari}{@ovebepari}
+		\\
+		\\
+		I am a tech enthusiast, a generalist graduate, explored a lot of \textbf{abstraction layers} of CS and prefer to stay in the\\bottom layers, away from the general users and closer to the system. I find how two abstraction layers communicate\\with each other (IPC, API, RPC etc) interesting. I believe 90\% of our daily problems can be solved using good\\ communication!
+	\end{tabular*}
+	
+	\vspace{0.25in}
+	
+	\resheading{Education}
+	\begin{itemize}
+	
+		\item \ressubheading{Dhaka University of Engineering \& Technology, Gazipur}{}{}{February 2018 - Aug 2022}
+		\begin{itemize}
+			\item BSc, Computer Science and Engineering
+		\end{itemize}
+	
+	\end{itemize}
+	
+	\vspace{0.20in}
+	
+	\resheading{Work Experiences}
+	\begin{itemize}
+	
+		\item \ressubheading{Associate DevOps - Therap BD Ltd.}{}{}{August 2022 - Now}
+		\begin{itemize} 
+			\item \href{https://therapbd.com/}{Therap (BD) Ltd.} is a US-based Software Company registered in Bangladesh, operating since 2004. Therap provides Software as a Service (SaaS) to government and private organizations globally that serve people with intellectual and developmental disabilities.
+		\end{itemize}	
+	
+		\item \ressubheading{Backend Engineer - TicketBD}{}{}{February 2016 - 2017}
+		\begin{itemize} 
+			\item \href{https://www.facebook.com/ticketbd.online}{TicketBD}, lauched on Sayedabad, Dhaka to sell bus tickets. \textbf{Designed} and \textbf{implemented} this PHP backend application, handled multiple buy requests to the same "bus seat" using caching. Worked here when I was in college.
+		\end{itemize}
+	\end{itemize}
+
+	\vspace{0.20in}
+	
+	\resheading{Technical Skills and Projects}
+	\begin{itemize}  
+		\item Algorithmic \textbf{Problem Solving} (\href{https://www.stopstalk.com/user/profile/ovebepari}{400+ and counting}), InfoSec \textbf{Security Contests} (\href{https://tryhackme.com/p/dovi}{dovi-0x06 @THM}), C++, Python, GNU/Linux systems (5+ years), Web Frameworks / MVC architecture, Apache, Git, OSI Layers, Database \& DBMS. I notice and enjoy other's design choices (UI/UX, System Architecture, Typography etc)
+    	 \item \textbf{Projects:} A lot of projects to understand various abstraction layers of Operating Systems such as:
+    	    \begin{itemize}
+    	        \item \textbf{Linux Virtual File System:}         \href{https://github.com/ovebepari/sec\_fs}{Sec\_Fs}, that encrypts file contents in every write request
+    	        \item \textbf{Github Clone}: \href{https://github.com/ovebepari/Github_Clone}{Gitbucket} - that lets us clone over http
+    	        \item \textbf{Browser Extensions:} \href{https://github.com/ovebepari/Youtube-Research-Mode}{Youtube Research Mode}, MS Outlook \href{https://github.com/ovebepari/PhishMe}{desktop and web app extension}
+    	        \item Local Network File Servers, Android OS Daemons, \textbf{Linux CLI} tools etc
+    	    \end{itemize}
+		
+    	\vspace{0.03in}
+
+		\item \textbf{Writing:} I write and investigate about \textbf{Systems}, \textbf{System Architecture}, \textbf{GNU/Linux}, \href{https://ovebepari.github.io/linux\%7Csystems/docker-socket-tale/}{Software Daemons}, \textbf{File Systems} (undergrad thesis on file systems on user space), \textbf{Syscalls} (strace!), Infosec, \href{https://ovebepari.github.io/Computer-Networking-Series/}{Computer Networks and the Internet} on my free time
+		
+		\vspace{0.03in}
+
+
+	\end{itemize}
+
+	\vspace{0.20in}
+	
+	\resheading{Leadership Experiences (selected)}
+	\begin{itemize}
+		\item \ressubheading{Vice President, Ex General Secretary - DUET Computer Society}{}{}{July 2021 - June 2022}
+		\begin{itemize}
+		    \item I managed and moderated DUETCS organization online repositories and profiles on \href{https://github.com/duetcs}{Github}, \href{https://duetcs.github.io}{Website}, \href{https://www.linkedin.com/company/duet-computer-society}{LinkedIn} and hosted offline events
+		\end{itemize}
+		
+		\item \ressubheading{Senior Vice President - DUET Sports Club}{}{}{July 2021 - Jan 2022}
+		\begin{itemize}
+		    \item Organized several inter-department Cricket and Football tournaments, learned how tough it is to finish a sports tournament in a chaotic setting like south asia
+		\end{itemize}
+		
+	\end{itemize}
+
+	\vspace{0.20in}
+	
+	\resheading{Awards and Certifications}
+	\begin{itemize}
+	
+		\item \textbf{ITEE, Level 2 - FE, Full Pass, Examinee No: FE01-0644} (Nov 2021,  Information Technology Engineers Examination - ITEE is the national level IT Engineers Examination governed by \textbf{IPA, Japan}, considered as the IELTS of CS). Here's a \href{https://drive.google.com/file/d/1CcmWz6TqS86uMLqOgPsLc3_Xd5EdaMMO/view?usp=sharing}{demo question}.
+		
+		\item \textbf{Champion of Intra-DUET English Olympiad} (2019, Became the champion of Intra-DUET English Olympiad held by English Language Club, DUET)
+
+	\end{itemize}
+
+	\vspace{0.20in}
+	
+	\resheading{Field of Interests}
+		\begin{itemize}
+			\item Computer Systems, Core CS,  World Peace, Mass/Public Education, \href{https://www.instagram.com/obepari/}{Visual Communication}, Animal Conservation (Volunteered for a year at \url{} \href{https://www.instagram.com/creativeconservationalliance/}{Creative Conservation Alliance, Turtle Conservation Center, Bhawal National Park} in this lockdown), Sports and Poetry, Chess, Math, Online forums (Hacker News, Reddit), Local and Global Economy and anything that stirs the intellectual interest
+		\end{itemize}
+
+
+\end{document}
